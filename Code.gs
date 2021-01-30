@@ -41,3 +41,29 @@ function showSidebar() {
    */
   SpreadsheetApp.getUi().showSidebar(ui);
 }
+
+/**
+ * Apps Script trigger. Runs when an editable document is opened.
+ */
+function onOpen(e) {
+  /**
+   * Create the Google Sheets add-on menu item in the navigation bar, and have it
+   * call `showSidebar()` when clicked.
+   */
+  SpreadsheetApp.getUi()
+    .createAddonMenu()
+    .addItem('Helpful Functions', 'showSidebar')
+    .addToUi();
+}
+
+/**
+ * Apps Script trigger. Runs when the add-on is installed.
+ */
+function onInstall(e) {
+  /**
+   * The document is already open, so after installation is complete
+   * the ˙onOpen()` trigger must be called manually in order for the
+   * add-on to execute.
+   */
+  onOpen(e);
+}
