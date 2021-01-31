@@ -1,0 +1,17 @@
+{
+  "timeZone": "America/New_York",
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "addOns": {
+    "common": {
+      "name": "Helpful Math Functions Addon",
+      "logoUrl": "https://drive.google.com/uc?export=view&id=1q7VWtFmgK2Gmegc7EiJqTqgA6jGNfy46"
+    },
+    "sheets": {
+      "homepageTrigger": {
+        "enabled": true,
+        "runFunction": "showSidebar"
+      }
+    }
+  }
+}
