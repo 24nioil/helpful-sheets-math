@@ -1,3 +1,5 @@
+var ui = SpreadsheetApp.getUi();
+
 function mean(arr) {
   var sum = 0;
   for (i = 0; i < arr.length; i++) {
@@ -50,8 +52,7 @@ function onOpen(e) {
    * Create the Google Sheets add-on menu item in the navigation bar, and have it
    * call `showSidebar()` when clicked.
    */
-  SpreadsheetApp.getUi()
-    .createAddonMenu()
+  ui.createAddonMenu()
     .addItem('Helpful Functions', 'showSidebar')
     .addToUi();
 }
